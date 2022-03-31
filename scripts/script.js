@@ -4,6 +4,7 @@ document.querySelector('#menu-btn').onclick = () =>{
     navbar.classList.toggle('active');
     searchForm.classList.remove('active');
     cartItem.classList.remove('active');
+    
 }
 
 let searchBar = document.querySelector('.search-bar-container');
@@ -13,12 +14,14 @@ document.querySelector('#search-btn').onclick = () =>{
 
     searchBtn.classList.toggle('fa-times');
     searchBar.classList.toggle('active');
+    cartItem.classList.remove('active');
 }
 
 window.onscroll = () =>{
     searchBtn.classList.remove('fa-times');
     searchBar.classList.remove('active');
     loginForm.classList.remove('active');
+    cartItem.classList.remove('active');
 }
 
 let formBtn = document.querySelector('#login-btn');
