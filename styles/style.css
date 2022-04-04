@@ -198,7 +198,7 @@ top:0;
 margin:2rem;
 padding:1.5rem 2rem;
 border-radius: .5rem;
-background:#fff;
+background:var(--white);
 width:50rem;
 }
 
@@ -214,7 +214,7 @@ padding:1rem 0;
 width:100%;
 padding:1rem;
 font-size: 1.7rem;
-color:#333;
+color:var(--lochinvar);
 margin:.6rem 0;
 border:.1rem solid rgba(0,0,0,.3);
 text-transform: none;
@@ -240,15 +240,15 @@ width:100%;
 .login-form-container form p{
     padding:.5rem 0;
     font-size: 1.5rem;
-    color:#666;
+    color:var(--lochinvar);
 }
   
 .login-form-container form p a{
-    color:var(#666);
+    color:var(--button-color);
 }
   
 .login-form-container form p a:hover{
-    color:#333;
+    color:var(--soft-amber);
     text-decoration: underline;
 }
   
@@ -397,15 +397,15 @@ width:100%;
 }
 
 .diy span{
-    color: var(--button-color)
+    color: var(--button-color);
+    /* background-color: var(--white); */
+    
 }
 
 .diy h1{
-    color: var(--main-text)
-}
-
-.diy img{
-    opacity: 0.5;
+    color: var(--main-text);
+    background-color: var(--white);
+    padding-bottom: 0 !important;
 }
 
 .table{
@@ -752,7 +752,7 @@ width:100%;
     .header .navbar{
         position: absolute;
         top:100%; right: -100%;
-        background: #fff;
+        background: var(--white);
         width: 30rem;
         height: calc(100vh - 9.5rem);
     }
@@ -762,7 +762,7 @@ width:100%;
     }
 
     .header .navbar a{
-        color:var(--black);
+        color:var(--main-text);
         display: block;
         margin:1.5rem;
         padding:.5rem;
