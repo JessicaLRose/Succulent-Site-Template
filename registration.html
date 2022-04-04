@@ -20,13 +20,10 @@
             }
             .registrationform{
             padding: none !important;
-            
         }
 
         }
-        body,html { 
-            height: 100%; 
-            position: relative;
+        body, html{
             width: 100vw;
         }
 
@@ -34,18 +31,23 @@
             text-transform: none;
         }
 
+        .header{
+            position: sticky !important;
+        }
 
         .section{
-            padding: 15rem;
+            height: 80vh;
+            display: flex;
+            vertical-align: middle;
         }
         
         
         .registrationform{
-            position: relative;
-            margin-top: 91px;
-            padding: 5rem;
-            padding-bottom: 91px;
-            
+            width: 100%; 
+        }
+
+        .register-body{
+            width: 100%;
         }
 
         .invalid-feedback{
@@ -77,12 +79,6 @@
             box-shadow:none;
         }
 
-        .footer{
-            position: absolute;
-            bottom: 0;
-            left:0;
-            right: 0;
-        }
 
     </style>
 </head>
@@ -104,7 +100,7 @@
                 <a id="loginLink">login</a>
                 <a href="index.html">home</a>
                 <a href="product.html">shop</a>
-                <a href="#diy tri kit">diy tri kit</a>
+                <a href="index.html#diy">diy tri kit</a>
                 <a href="index.html#about">about</a>
                 <a href="index.html#contact">contact</a>
             </div>
@@ -276,7 +272,7 @@
 
 <!-- footer section starts  -->
 
-<footer class="footer">
+<div class="footer">
 
     <div class="share">
         <a href="#" class="fab fa-facebook-f"></a>
@@ -298,7 +294,7 @@
 
     <div class="credit">created by <span>jessica fatim</span> | all rights reserved</div>
 
-</footer>
+</div>
 
 <!-- footer section ends -->
 

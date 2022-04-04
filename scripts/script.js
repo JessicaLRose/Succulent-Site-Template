@@ -92,29 +92,46 @@ let confirmPassword = document.getElementById("ConfirmPassword");
       })
   })()
 
-  $("select").on("click" , function() {
+
+
+// about form
+let selectInput = document.getElementById("select-box1");
+
+
+selectInput.addEventListener("input", function(){
+  let selectIndex = selectInput.selectedIndex;
+  let makeSelection = selectInput.getElementsByTagName("option")[selectIndex].innerHTML;
+  let label = document.querySelector('.label-desc');
+  label.innerHTML = makeSelection;
+  console.log(makeSelection);
+})
+
+
+  // $("select").on("click" , function() {
   
-    $(this).parent(".select-box").toggleClass("open");
+  //   $(this).parent(".select-box").toggleClass("open");
     
-  });
+  // });
   
-  $(document).mouseup(function (e)
-  {
-      var container = $(".select-box");
+  // $(document).mouseup(function (e)
+  // {
+  //     var container = $(".select-box");
   
-      if (container.has(e.target).length === 0)
-      {
-          container.removeClass("open");
-      }
-  });
+  //     if (container.has(e.target).length === 0)
+  //     {
+  //         container.removeClass("open");
+  //     }
+  // });
   
   
-  $("select").on("change" , function() {
+  // $("select-box1").on("change" , function() {
     
-    var selection = $(this).find("option:selected").text(),
-        labelFor = $(this).attr("id"),
-        label = $("[for='" + labelFor + "']");
+  //   var selection = $(this).find("option:selected").text(),
+  //       labelFor = $(this).attr("id"),
+  //       label = $("[for='" + labelFor + "']");
       
-    label.find(".label-desc").html(selection);
+  //   label.find(".label-desc").html(selection);
       
-  });
+  // });
+
+  // about ends
