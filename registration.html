@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawtïte Plant Co | Registration</title>
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" class="a" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="styles/style.css"/>
+
+    <style>
+
+        @media (max-width:387px) {
+            .card-title{
+                font-size: 5vw !important;
+            }
+            .registrationform{
+            padding: none !important;
+            
+        }
+
+        }
+        body,html { 
+            height: 100%; 
+            position: relative;
+            width: 100vw;
+        }
+
+        input{
+            text-transform: none;
+        }
+
+
+        .section{
+            padding: 15rem;
+        }
+        
+        
+        .registrationform{
+            position: relative;
+            margin-top: 91px;
+            padding: 5rem;
+            padding-bottom: 91px;
+            
+        }
+
+        .invalid-feedback{
+            font-size:small;
+            text-transform: none;
+        }
+
+        .card-title{
+            font-size: 3rem;
+            font-weight:bold;
+            text-align: center;
+            color: #3f5855;
+            margin: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .form-label{
+            font-size: 1.5em;
+        }
+
+        .form-control{
+            border:none;
+            padding:0;
+            border-bottom: 2px solid #3f5855;
+            border-radius: 0px;
+        }
+
+        .form-control:focus{
+            box-shadow:none;
+        }
+
+        .footer{
+            position: absolute;
+            bottom: 0;
+            left:0;
+            right: 0;
+        }
+
+    </style>
+</head>
+<body style="background-color: #d1bfad">
+
+    <!-- header section starts -->
+    <header class="header">
+
+        <a href="#" class="logo">
+            <div class="brand">
+            <img src="img/fakelogo.png" alt="">
+            <span>Pawtïte Plant Co</span>
+            </div>
+        </a>
+    
+        <nav class="navbar">
+    
+            <div class="d-block">
+                <a id="loginLink">login</a>
+                <a href="index.html">home</a>
+                <a href="product.html">shop</a>
+                <a href="#diy tri kit">diy tri kit</a>
+                <a href="index.html#about">about</a>
+                <a href="index.html#contact">contact</a>
+            </div>
+    
+        </nav>
+    
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fa-solid fa-user" id="login-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+            
+        </div>
+    
+        <div class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </div>
+    
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="img/cart-item-1.png" alt="">
+                <div class="content">
+                    <h3>cart item 01</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="img/cart-item-2.png" alt="">
+                <div class="content">
+                    <h3>cart item 02</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="img/cart-item-3.png" alt="">
+                <div class="content">
+                    <h3>cart item 03</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="img/cart-item-4.png" alt="">
+                <div class="content">
+                    <h3>cart item 04</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <a href="#" class="btn">checkout now</a>
+        </div>
+    
+    </header>
+    
+    <!-- header section ends -->
+    
+    <!--login form starts-->
+    
+    <div class="login-form-container" >
+    
+        <div class="fas fa-times" id="form-close"></div>
+    
+        <form action="">
+            <h3>login</h3>
+            <input type="email" class="box" placeholder="enter your email">
+            <input type="password" class="box" placeholder="enter your password">
+            <input type="submit" value="login now" class="btn">
+            <input type="checkbox" id="remember">
+            <label for="remember">remember me</label>
+            <p>forget password? <a href="#">click here</a></p>
+            <p>don't have an account? <a href="registration.html">register now</a></p>
+        </form>
+    
+    </div>
+    <!--login form ends-->
+
+
+    <section class="section registrationform">
+        <div class="row register-body ">
+            <div class="col-sm-8 col-md-8 mx-auto my-auto">
+                <div class="card">
+                    <div class="card-body shadow-lg">
+                      <h1 class="card-title">Registration Form</h1>
+                      <form class="needs-validation" novalidate>
+                        <div class="row ">
+                            <div class="col-sm-8 mx-auto my-auto">
+                        <div class="mb-3">
+                            <label for="InputFirstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control form-control-lg" name="" placeholder= "First Name" id="InputFirstName" pattern="^[a-zA-Z ]*$" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid name without numbers or special characters
+                              </div>
+                          </div>
+
+                        <div class="mb-3">
+                            <label for="InputLastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control form-control-lg" name="" placeholder= "Last Name" id="InputLastName" pattern="^[a-zA-Z ]*$" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid name without numbers or special characters
+                              </div>
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="InputEmail" class="form-label">Email address</label>
+                          <input type="email" class="form-control form-control-lg" name="" placeholder= "Email*" id="InputEmail" required>
+                          <div class= "invalid-feedback">Please provide a valid email
+                          </div>
+                        </div>
+
+                        <!-- <div class="mb-3">
+                          <label for="InputPassword" class="form-label">Password</label>
+                          <input type="password" class="form-control form-control-lg" name="password" placeholder= "Password*" id="InputPassword" 
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                          <div class= "invalid-feedback">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters
+                        </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="ConfirmPassword" class="form-label"> Confirm Password</label>
+                            <input type="password" class="form-control form-control-lg" name="passwordconfirm" placeholder= "Confirm Password*" id="ConfirmPassword"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                            <div class= "invalid-feedback">Passwords don't match.
+                            </div>
+                          </div> -->
+
+                          <div class="mb-3">
+                            <label for="InputPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control form-control-lg" name="InputPassword" placeholder= "Password*" id="InputPassword" 
+                              pattern="^\S{6,}$" 
+                              onchange= "this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.ConfirmPassword.pattern = this.value;"
+                              required>
+                            <div class= "invalid-feedback">Must contain at least 6 characters
+                          </div>
+                          </div>
+  
+                          <div class="mb-3">
+                              <label for="ConfirmPassword" class="form-label"> Confirm Password</label>
+                              <input type="password" class="form-control form-control-lg" name="ConfirmPassword" placeholder= "Confirm Password*" id="ConfirmPassword"
+                              pattern="^\S{6,}$" 
+                              onchange= "this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : '');"
+                              required>
+                              <div class= "invalid-feedback" >Passwords don't match.
+                              </div>
+                            </div>
+
+                          <div class="mb-3">
+                            <label for="InputNumber" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control form-control-lg" name="" placeholder= "123-456-7890"  id="InputNumber" 
+                            pattern= "[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                            <div class= "invalid-feedback">Please provide a valid phone number.
+                            </div>
+                          </div>
+
+                        <center><button type="submit" class="btn btn-primary">Submit
+                        </button></center>
+
+                    </div>
+                    </div>
+                      </form>
+                      
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">menu</a>
+        <a href="#">products</a>
+        <a href="#">review</a>
+        <a href="#">contact</a>
+        <a href="#">blogs</a>
+    </div>
+
+    <div class="credit">created by <span>jessica fatim</span> | all rights reserved</div>
+
+</footer>
+
+<!-- footer section ends -->
+
+    <!-- custom js file link  -->
+
+<script src="/scripts/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

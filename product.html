@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawtïte Plant Co | Prodducts</title>
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" class="a" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="styles/style.css"/>
+
+    <style>
+        .banner {
+            background-image:
+            url(/img/productbanner.jpg);
+            /* Create the parallax scrolling effect */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: contain;
+            /* padding-top: 70px; */
+            position: relative;
+            object-fit: cover;
+            height: 80vh;
+            width:100%;
+
+        }
+
+        .banner-text {
+            text-align: center;
+            position: relative;
+            font-size: 7rem;
+            padding: 15rem 0;
+            color: var(--white);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .product-page{
+            /* padding-top: 10rem;
+            padding-bottom: 10rem; */
+            padding: 8rem 0;
+        }
+
+        .product-image{
+	        width: 200px;
+	        height: 200px;
+        }
+
+        .card-title{
+            color: var(--lochinvar);
+            font-size: 20px;
+        }
+
+        .card-text{
+            font-size: 13px;
+        }
+
+        .blog-sidebar-title{
+            color: var(--main-text);
+            font-size: 25px;
+        }
+
+        .blog-sidebar-list{
+            color: var(--main-text);
+            font-size: 16px;
+        }
+
+        .blog-sidebar-text{
+            color: var(--main-text);
+            font-size: 16px;
+        }
+
+        .blog-form{
+            padding: 3rem;
+        }
+
+        .tags{
+            color: var(--lochinvar);
+            font-family: 'Kanit',sans-serif;
+            font-size: 15px;
+            font-weight: 200;
+        }
+
+        </style>
+</head>
+
+<body>
+    <!-- header section starts -->
+
+    <header class="header">
+
+        <a href="#" class="logo">
+            <div class="brand">
+            <img src="img/fakelogo.png" alt="">
+            <span>Pawtïte Plant Co</span>
+            </div>
+        </a>
+    
+        <nav class="navbar">
+    
+            <div class="d-block">
+                <a id="loginLink">login</a>
+                <a href="index.html">home</a>
+                <a href="product.html">shop</a>
+                <a href="#diy tri kit">diy tri kit</a>
+                <a href="index.html#about">about</a>
+                <a href="index.html#contact">contact</a>
+            </div>
+    
+        </nav>
+    
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fa-solid fa-user" id="login-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+            
+        </div>
+    
+        <div class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </div>
+    
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="img/cart-item-1.png" alt="">
+                <div class="content">
+                    <h3>cart item 01</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="img/cart-item-2.png" alt="">
+                <div class="content">
+                    <h3>cart item 02</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="img/cart-item-3.png" alt="">
+                <div class="content">
+                    <h3>cart item 03</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="img/cart-item-4.png" alt="">
+                <div class="content">
+                    <h3>cart item 04</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <a href="#" class="btn">checkout now</a>
+        </div>
+    
+    </header>
+    
+    <!-- header section ends -->
+
+    <!--login form starts-->
+
+<div class="login-form-container">
+
+    <div class="fas fa-times" id="form-close"></div>
+
+    <form action="">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="enter your email">
+        <input type="password" class="box" placeholder="enter your password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have an account? <a href="#">register now</a></p>
+    </form>
+
+</div>
+<!--login form ends-->
+
+    <div class="banner">
+        <h1 class="banner-text">Products</h1>
+    </div>
+
+	<section class="product-page">
+		<div class="container">
+			<div class="row">
+
+				<div class="blog-form col-xxl-3">
+
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<h2 class="blog-sidebar-title"><b>Categories</b></h2>
+					<hr />
+
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Soft</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Hardy</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Accessories</b></p>
+
+                    
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+
+				</div>
+				<!--END  <div class="col-lg-3 blog-form">-->
+
+				<div class=" col-lg-9" style="padding-left: 30px;">
+					<div class="row">
+						<div class="col">
+							
+						</div>
+
+						<div class="col">
+
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row row-cols-8">
+						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="img/featured-plant-1.png" class="product-image">
+									<h5 class="card-title"><b>Plant 1</b></h5>
+									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
+									<p class="tags">Price $25.16</p>
+                                    <a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="img/featured-plant-2.png" class="product-image">
+									<h5 class="card-title"><b>Plant 2</b></h5>
+									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
+									<p class="tags">Price $16</p>
+									<a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="img/featured-plant-3.png" class="product-image">
+									<h5 class="card-title"><b>Plant 3</b></h5>
+									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
+									<p class="tags">Price $20</p>
+									<a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="img/featured-plant-4.png" class="product-image">
+									<h5 class="card-title"><b>Plant 4</b></h5>
+									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
+									<p class="tags">Price $14.16</p>
+                                    <a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="img/featured-plant-5.png" class="product-image">
+									<h5 class="card-title"><b>Plant 5</b></h5>
+									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
+									<p class="tags">Price $20.16</p>
+									<a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="img/featured-plant-6.png" class="product-image">
+									<h5 class="card-title"><b>Plant 6</b></h5>
+									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
+									<p class="tags">Price $35.16</p>
+                                    <a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="img/featured-plant-7.png" class="product-image">
+									<h5 class="card-title"><b>Plant 7</b></h5>
+									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
+									<p class="tags">Price $16</p>
+									<a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="img/featured-plant-8.png" class="product-image">
+									<h5 class="card-title"><b>Plant 8</b></h5>
+									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
+									<p class="tags">Price $26</p>
+									<a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="img/featured-plant-9.png" class="product-image">
+									<h5 class="card-title"><b>Plant 9</b></h5>
+									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
+									<p class="tags">Price $50</p>
+                                    <a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+				</div>
+            </section>
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">menu</a>
+        <a href="#">products</a>
+        <a href="#">review</a>
+        <a href="#">contact</a>
+        <a href="#">blogs</a>
+    </div>
+
+    <div class="credit">created by <span>jessica fatim</span> | all rights reserved</div>
+ 
+</footer>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="/scripts/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
