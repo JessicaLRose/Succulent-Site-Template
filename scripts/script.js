@@ -70,10 +70,6 @@ let validateEmail = document.getElementById("InputEmail");
 let validatePassword = document.getElementById("InputPassword");
 let confirmPassword = document.getElementById("ConfirmPassword");
 
-// const nameError = document.querySelector('#InputFirstName + span.error');
-// let hasnumber = /\d/; //regex for numbers in name;
-
-
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
     'use strict'
@@ -108,33 +104,5 @@ selectInput.addEventListener("input", function(){
   label.innerHTML = makeSelection;
   console.log(makeSelection);
 })
-
-
-  // $("select").on("click" , function() {
-  
-  //   $(this).parent(".select-box").toggleClass("open");
-    
-  // });
-  
-  // $(document).mouseup(function (e)
-  // {
-  //     var container = $(".select-box");
-  
-  //     if (container.has(e.target).length === 0)
-  //     {
-  //         container.removeClass("open");
-  //     }
-  // });
-  
-  
-  // $("select-box1").on("change" , function() {
-    
-  //   var selection = $(this).find("option:selected").text(),
-  //       labelFor = $(this).attr("id"),
-  //       label = $("[for='" + labelFor + "']");
-      
-  //   label.find(".label-desc").html(selection);
-      
-  // });
 
   // about ends
