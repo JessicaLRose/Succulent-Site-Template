@@ -178,6 +178,7 @@ body{
 .header .search-bar-container label:hover{
     color:var(--soft-amber);
 }
+
 /* loginform */
 .login-form-container{
     position: fixed;
@@ -263,6 +264,8 @@ width:100%;
 }
 /* loginformend */
 
+/* cart menu start */
+
 .header .cart-items-container{
     position: absolute;
     top:100%; right: -100%;
@@ -284,16 +287,16 @@ width:100%;
     gap:1.5rem;
 }
 
-.header .cart-items-container .cart-item .fas fa-times{
+.header .cart-items-container .cart-item .fa-times{
     position: absolute;
     top:1rem; right: 1rem;
     font-size: 2rem;
     cursor: pointer;
-    color: var(--black);
+    color: var(--main-text);
 }
 
-.header .cart-items-container .cart-item .fas fa-times:hover{
-    color:var(--main-color);
+.header .cart-items-container .cart-item .fa-times:hover{
+    color:var(--soft-amber);
 }
 
 .header .cart-items-container .cart-item img{
