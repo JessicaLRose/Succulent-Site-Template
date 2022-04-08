@@ -319,9 +319,9 @@ width:100%;
     text-align: center;
 }
 
-#home{
-    
-   padding-top:91px;
+.home{
+   flex-wrap: wrap;
+   display: block;
    
 }
 
@@ -336,8 +336,6 @@ width:100%;
     content:"";
     display:block;
     position:absolute;
-    top: 0;
-    width: 100vw;
     height: 60vh;
     background-image:linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
   }
@@ -786,26 +784,6 @@ width:100%;
     .header .search-form{
         width: 90%;
         right: 2rem;
-    }
-
-    /* #home{
-    
-        padding-top:80.17px;
-        
-     } */
-
-    .home{
-        background-position: left;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .home .content h3{
-        font-size: 4.5rem;
-    }
-
-    .home .content p{
-        font-size: 1.5rem;
     }
 
 }
