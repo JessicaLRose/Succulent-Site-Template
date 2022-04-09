@@ -104,3 +104,9 @@ selectInput.addEventListener("input", function(){
 })
 
 /* contact form drop-down on index.html ends */
+
+// bootstrap tooltip toggle
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
