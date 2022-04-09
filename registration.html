@@ -21,7 +21,6 @@
             }
         }
 
-        
         body, html{
             width: 100vw;
         }
@@ -37,15 +36,17 @@
         .section{
             height: 80vh;
             display: flex;
-            vertical-align: middle;
+            display: block;
         }
         
         .registrationform{
-            width: 100%; 
+            width: 100%;
+            display: flex; 
+            justify-content: space-around;
         }
 
         .register-body{
-            width: 100%;
+            width: 80vw;
         }
 
         .invalid-feedback{
@@ -180,14 +181,14 @@
 
 
     <section class="section registrationform">
-        <div class="row register-body ">
-            <div class="col-sm-8 col-md-8 mx-auto my-auto">
+        <div class="row justify-content-end register-body ">
+            <div class="col-10 col-sm-8 col-md-8 col-xl-6 mx-auto my-auto">
                 <div class="card">
                     <div class="card-body shadow-lg">
                       <h1 class="card-title">Registration Form</h1>
                       <form class="needs-validation" novalidate>
                         <div class="row ">
-                            <div class="col-sm-8 mx-auto my-auto">
+                            <div class="col-8 col-sm-8 mx-auto my-auto">
                         <div class="mb-3">
                             <label for="InputFirstName" class="form-label">First Name</label>
                             <input type="text" class="form-control form-control-lg" name="" placeholder= "First Name" id="InputFirstName" pattern="^[a-zA-Z ]*$" required>

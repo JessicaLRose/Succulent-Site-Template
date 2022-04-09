@@ -15,80 +15,88 @@
     <style>
 
 
-        .banner {
+
+        .banner-area {
             background-image:
-            url(/img/productbanner.jpg);
+            url(/img/catbanner2.jpg);
             /* Create the parallax scrolling effect */
             background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: contain;
-            padding-top: 70px;
             position: relative;
-            object-fit: cover;
-            height: 60vh;
+            /* background-attachment: fixed; */
+            background-position: center center;
+            background-size: cover;
+            /* object-fit: contain; */
+            height: 50vh;
             width:100%;
+            padding-top: 90px;
             display: block;
-            overflow: hidden;
-
         }
+
 
         .banner-text {
-            text-align: center;
-            justify-content: center;
-            position: relative;
-            display: flex;
             font-size: 7rem;
-            padding: 5rem;
             color: var(--white);
+            margin: 0;
+            position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
         }
 
-        .product-page{
-            width: 100%;
-            display: flex;
-            vertical-align: middle;
+        .nav-tabs, .nav-link, .nav-link.active{
+            border: none !important;
+            justify-content: center;
+            color:var(--main-text);
+            font-size: 2rem;
+        }
+        .nav-link{
+            color:var(--main-text);
+        }
+        .nav-link:hover{
+            color:var(--highlight-color);
+        }
+        .nav-link.active{
+            color: var(--button-color) !important;
+            border-bottom: 1px solid var(--soft-amber) !important;
         }
 
-        .product-image{
-	        width: 200px;
-	        height: 200px;
+        /* collection */
+
+        /* .collection-img span{
+            top: 20px;
+            right: 20px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+        } */
+
+        .collection-img:hover a{
+            display: block;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        }
+        .collection-img:hover .secondary-img{
+            opacity: 1;
         }
 
-        .card-title{
-            color: var(--lochinvar);
-            font-size: 20px;
+        .secondary-img{
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            transition: all 0.3s ease 0.1s;
+            z-index: 1;
         }
-
-        .card-text{
-            font-size: 13px;
+        .product-name{
+            color:var(--main-text);
+            text-decoration: underline;
+            font-size: 1.75rem;
+            padding-top: 1rem;
+            margin: 0;
         }
-
-        .blog-sidebar-title{
-            color: var(--main-text);
-            font-size: 25px;
-        }
-
-        .blog-sidebar-list{
-            color: var(--main-text);
-            font-size: 16px;
-        }
-
-        .blog-sidebar-text{
-            color: var(--main-text);
-            font-size: 16px;
-        }
-
-        .blog-form{
-            padding: 3rem;
-        }
-
-        .tags{
-            color: var(--lochinvar);
-            font-family: 'Kanit',sans-serif;
-            font-size: 15px;
-            font-weight: 200;
+        .product-price{
+            color: var(--soft-amber);
+            font-size: 2rem;
         }
 
         </style>
@@ -194,178 +202,99 @@
 
 <!-- product page starts -->
 
-    <section class="banner">
-        <h1 class="banner-text">Products</h1>
+    <section class="banner-area">
+        <h1 class="banner-text"><span><i class="fa-solid fa-bag-shopping"></i></span> Shop</h1>
+        <span><i class="fa-solid fa-bag-shopping"></i></span>
     </section>
 
 	<section class="product-page">
-		<div class="container">
-			<div class="row">
-
-				<div class="blog-form col-xxl-3">
-
-
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>
-
-					<h2 class="blog-sidebar-title"><b>Categories</b></h2>
-					<hr />
-
-					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Soft</b></p>
-					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Hardy</b></p>
-					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Accessories</b></p>
-
-                    
-
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>
+        
+            <!-- <div id="search-container">
+              <input
+                type="search"
+                id="search-input"
+                placeholder="Search product name here.."
+              />
+              <button id="search">Search</button>
+            </div> -->
+       <!-- collection -->
+    <div id = "collection" class = "py-5">
+        <div class = "container">
 
 
-				</div>
-				<!--END  <div class="col-lg-3 blog-form">-->
+            <div class = "row">
+                <div class = "col-md-12">
+  <!-- Nav tabs -->
+  <div class="tab-filters">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-products" type="button" role="tab" aria-controls="all-products" aria-selected="true">All</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="soft-tab" data-bs-toggle="tab" data-bs-target="#soft" type="button" role="tab" aria-controls="profile" aria-selected="false">Soft</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="hardy-tab" data-bs-toggle="tab" data-bs-target="#hardy" type="button" role="tab" aria-controls="messages" aria-selected="false">Hardy</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="accessories-tab" data-bs-toggle="tab" data-bs-target="#accessories" type="button" role="tab" aria-controls="settings" aria-selected="false">Accessories</button>
+    </li>
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="all-products" role="tabpanel" aria-labelledby="all-tab">
+        <div class = "collection-list mt-4 row gx-0 gy-3" id="product-cards">
 
-				<div class=" col-lg-9" style="padding-left: 30px;">
-					<div class="row">
-						<div class="col">
-							
-						</div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 all">
+                <div class = "collection-img position-relative">
+                    <a href="#">
+                    <img src ="img/cart-plant-1.png" class = "w-100">
+                    <img src ="img/featured-plant-1.png" class = "secondary-img w-100">
+                </a>
+                </div>
+                <div class ="text-center">
+                    <p class ="fw-bold product-name">product name</p>
+                    <span class = "fw-bolder product-price">$ 45.50</span>
+                </div>
+            </div>
 
-						<div class="col">
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                <div class = "collection-img position-relative">
+                    <img src = "img/featured-plant-1.png" class = "w-100">
+                </div>
+                <div class = "text-center">
 
-						</div>
+                    <p class = "text-capitalize my-1">gray shirt</p>
+                    <span class = "fw-bold">$ 45.50</span>
+                </div>
+            </div>
 
-					</div>
-					<!-- Sorting by <div class="row"> -->
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+                <div class = "collection-img position-relative">
+                    <img src = "img/featured-plant-1.png" class = "w-100">
+                </div>
+                <div class = "text-center">
+                    <p class = "text-capitalize my-1">gray shirt</p>
+                    <span class = "fw-bold">$ 45.50</span>
+                </div>
+            </div>
 
-					<div class="row row-cols-8">
-						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
-							<div class="card">
-								<div class="card-body text-center">
-									<img src="img/featured-plant-1.png" class="product-image">
-									<h5 class="card-title"><b>Plant 1</b></h5>
-									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
-									<p class="tags">Price $25.16</p>
-                                    <a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
-								</div>
-							</div>
-						</div>
 
-						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
-							<div class="card">
-								<div class="card-body text-center">
-									<img src="img/featured-plant-2.png" class="product-image">
-									<h5 class="card-title"><b>Plant 2</b></h5>
-									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
-									<p class="tags">Price $16</p>
-									<a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
-								</div>
-							</div>
-						</div>
+        </div>
+    </div>
+    <div class="tab-pane" id="soft" role="tabpanel" aria-labelledby="soft-tab">...</div>
+    <div class="tab-pane" id="hardy" role="tabpanel" aria-labelledby="hardy-tab">...</div>
+    <div class="tab-pane" id="accessories" role="tabpanel" aria-labelledby="accessories-tab">...</div>
+  </div>
 
-						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
-							<div class="card">
-								<div class="card-body text-center">
-									<img src="img/featured-plant-3.png" class="product-image">
-									<h5 class="card-title"><b>Plant 3</b></h5>
-									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
-									<p class="tags">Price $20</p>
-									<a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
-								</div>
-							</div>
-						</div>
+        </div>
+    </div>
+</section>
 
-					</div>
-					<!-- Sorting by <div class="row"> -->
-
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>
-
-					<div class="row">
-						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
-							<div class="card">
-								<div class="card-body text-center">
-									<img src="img/featured-plant-4.png" class="product-image">
-									<h5 class="card-title"><b>Plant 4</b></h5>
-									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
-									<p class="tags">Price $14.16</p>
-                                    <a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
-							<div class="card">
-								<div class="card-body text-center">
-									<img src="img/featured-plant-5.png" class="product-image">
-									<h5 class="card-title"><b>Plant 5</b></h5>
-									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
-									<p class="tags">Price $20.16</p>
-									<a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
-							<div class="card">
-								<div class="card-body text-center">
-									<img src="img/featured-plant-6.png" class="product-image">
-									<h5 class="card-title"><b>Plant 6</b></h5>
-									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
-									<p class="tags">Price $35.16</p>
-                                    <a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<!-- Sorting by <div class="row"> -->
-					<div>&nbsp;</div>
-					<div>&nbsp;</div>
-
-					<div class="row">
-						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
-							<div class="card">
-								<div class="card-body text-center">
-									<img src="img/featured-plant-7.png" class="product-image">
-									<h5 class="card-title"><b>Plant 7</b></h5>
-									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
-									<p class="tags">Price $16</p>
-									<a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
-							<div class="card">
-								<div class="card-body text-center">
-									<img src="img/featured-plant-8.png" class="product-image">
-									<h5 class="card-title"><b>Plant 8</b></h5>
-									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
-									<p class="tags">Price $26</p>
-									<a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-1 col-sm-4 col-md-5 col-lg-4">
-							<div class="card">
-								<div class="card-body text-center">
-									<img src="img/featured-plant-9.png" class="product-image">
-									<h5 class="card-title"><b>Plant 9</b></h5>
-									<p class="card-text small">Bespoke cloud bread umami pour-over glossier woke selvage franzen.</p>
-									<p class="tags">Price $50</p>
-                                    <a href="#" class="btn" id="add-cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<!-- Sorting by <div class="row"> -->
-				</div>
-            </section>
-
+         
+    <!-- end of collection -->
+</section>
 <!-- product page ends -->
 
 
