@@ -12,6 +12,7 @@
     <!-- custom css file link -->
     <link rel="stylesheet" href="styles/style.css"/>
 
+
     <style>
 
 
@@ -32,7 +33,6 @@
             display: block;
         }
 
-
         .banner-text {
             font-size: 7rem;
             color: var(--white);
@@ -42,6 +42,10 @@
             left: 50%;
             margin-right: -50%;
             transform: translate(-50%, -50%)
+        }
+
+        #cart-add {
+            margin: 3rem;
         }
 
         .nav-tabs, .nav-link, .nav-link.active{
@@ -63,15 +67,8 @@
 
         /* collection */
 
-        /* .collection-img span{
-            top: 20px;
-            right: 20px;
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-        } */
 
-        .collection-img:hover a{
+        .collection-img:hover {
             display: block;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
         }
@@ -90,14 +87,95 @@
         .product-name{
             color:var(--main-text);
             text-decoration: underline;
-            font-size: 1.75rem;
+            font-size: 2em;
             padding-top: 1rem;
             margin: 0;
         }
         .product-price{
-            color: var(--soft-amber);
-            font-size: 2rem;
+            color: var(--button-color);
+            font-size: 2.5em;
         }
+        .modal-content{
+            border-radius: 1rem;
+        }
+        .container-fluid{
+            /* height:50rem;
+            width: 90rem; */
+            display: flex;
+        }
+        .image-container{
+            width: 50%;
+        }
+
+        .big-image{
+                /* height:70%;
+                width: 70%; */
+                padding: 1rem;
+                object-fit: contain;
+                
+            }
+
+            .big-image img{
+                height:100%;
+                width: 100%;
+                object-fit: fill;
+
+            }
+
+            
+            .small-image{
+                /* height:30%;
+                width: 100%; */
+                display: flex;
+                object-fit: contain;
+            }
+
+            .small-image img{
+                height:13rem;
+                width: 13rem;
+                object-fit: fill;
+                object-fit: cover;
+                cursor: pointer;
+                
+            }
+
+            .description-container{
+            width: 50%;
+            }
+
+
+            .text-container{
+                font-size: 1.5em;
+            }
+
+
+
+            @media (max-width:437px){
+                .description-container{
+                width: 100%;
+            }
+
+            .small-image{
+                display: none;
+            }
+
+            .big-image{
+                height:100%;
+                width: 100%;
+                object-fit: fill;
+            }
+            /* .container-fluid{
+            justify-content: center;
+            display: flex;
+        } */
+        .modal-body .container .row{
+           display: flex;
+           justify-content: center;
+        }
+            }
+
+/*Image modal*/
+
 
         </style>
 </head>
@@ -200,6 +278,58 @@
 </div>
 <!--login form ends-->
 
+<!-- Vertically centered modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-md"> 
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 image-container">
+                        <div class="big-image">
+                            <img src="/img/cart-plant-1.png" alt="">
+                        </div>
+                        <div class="small-image">
+                            <img src="/img/featured-plant-1.png" alt="">
+                            <img src="/img/placeholder.png" alt="">
+                            <img src="/img/placeholder.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 ms-auto description-container">
+                        <h1 class="product-name">product name</h1>
+                        <br>
+                        <p class="text-container">Vinyl irony 8-bit, bespoke put a bird on it health goth portland direct trade pork belly YOLO mixtape post-ironic. Letterpress copper mug taiyaki migas put a bird on it roof party vice neutra butcher blog heirloom mustache brunch everyday carry.</p>
+                      
+                        <div class="product-price fw-bold">
+                            <span>$ 9.99</span>
+                        </div>
+                        <br>
+                        <div>
+                        <a href="#" class="btn position-absolute bottom-0 end-0" id="cart-add"><i class="fa fa-shopping-cart"></i><span> Add to Cart</span></a>
+                        </div>
+                    </div>
+                   
+                    
+                   
+                    
+                </div>
+            </div>
+
+
+        </div>
+        <!-- <div class="modal-footer">
+            <a href="#" class="btn" id="cart-add"><i class="fa fa-shopping-cart"></i><span> Add to Cart</span></a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  
+
 <!-- product page starts -->
 
     <section class="banner-area">
@@ -244,14 +374,14 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div class="tab-pane active" id="all-products" role="tabpanel" aria-labelledby="all-tab">
-        <div class = "collection-list mt-4 row gx-0 gy-3" id="product-cards">
+        <div class = "collection-list mt-4 row gx-0 gy-3">
 
             <div class = "col-md-6 col-lg-4 col-xl-3 p-2 all">
                 <div class = "collection-img position-relative">
-                    <a href="#">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="productdetails">
                     <img src ="img/cart-plant-1.png" class = "w-100">
                     <img src ="img/featured-plant-1.png" class = "secondary-img w-100">
-                </a>
+                    </button>
                 </div>
                 <div class ="text-center">
                     <p class ="fw-bold product-name">product name</p>
@@ -259,38 +389,98 @@
                 </div>
             </div>
 
-            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 all">
                 <div class = "collection-img position-relative">
-                    <img src = "img/featured-plant-1.png" class = "w-100">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="productdetails">
+                    <img src ="img/cart-plant-1.png" class = "w-100">
+                    <img src ="img/featured-plant-1.png" class = "secondary-img w-100">
+                    </button>
                 </div>
-                <div class = "text-center">
-
-                    <p class = "text-capitalize my-1">gray shirt</p>
-                    <span class = "fw-bold">$ 45.50</span>
+                <div class ="text-center">
+                    <p class ="fw-bold product-name">product name</p>
+                    <span class = "fw-bolder product-price">$ 45.50</span>
                 </div>
             </div>
 
-            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 all">
                 <div class = "collection-img position-relative">
-                    <img src = "img/featured-plant-1.png" class = "w-100">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="productdetails">
+                    <img src ="img/cart-plant-1.png" class = "w-100">
+                    <img src ="img/featured-plant-1.png" class = "secondary-img w-100">
+                    </button>
                 </div>
-                <div class = "text-center">
-                    <p class = "text-capitalize my-1">gray shirt</p>
-                    <span class = "fw-bold">$ 45.50</span>
+                <div class ="text-center">
+                    <p class ="fw-bold product-name">product name</p>
+                    <span class = "fw-bolder product-price">$ 45.50</span>
                 </div>
             </div>
-
 
         </div>
     </div>
-    <div class="tab-pane" id="soft" role="tabpanel" aria-labelledby="soft-tab">...</div>
-    <div class="tab-pane" id="hardy" role="tabpanel" aria-labelledby="hardy-tab">...</div>
-    <div class="tab-pane" id="accessories" role="tabpanel" aria-labelledby="accessories-tab">...</div>
+
+    <div class="tab-pane" id="soft" role="tabpanel" aria-labelledby="soft-tab">
+        <div class = "collection-list mt-4 row gx-0 gy-3">
+
+        <div class = "col-md-6 col-lg-4 col-xl-3 p-2 all">
+            <div class = "collection-img position-relative">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="productdetails">
+                <img src ="img/cart-plant-1.png" class = "w-100">
+                <img src ="img/featured-plant-1.png" class = "secondary-img w-100">
+                </button>
+            </div>
+            <div class ="text-center">
+                <p class ="fw-bold product-name">product name</p>
+                <span class = "fw-bolder product-price">$ 45.50</span>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="tab-pane" id="hardy" role="tabpanel" aria-labelledby="hardy-tab">
+        <div class = "collection-list mt-4 row gx-0 gy-3">
+
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 all">
+                <div class = "collection-img position-relative">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="productdetails">
+                    <img src ="img/cart-plant-1.png" class = "w-100">
+                    <img src ="img/featured-plant-1.png" class = "secondary-img w-100">
+                    </button>
+                </div>
+                <div class ="text-center">
+                    <p class ="fw-bold product-name">product name</p>
+                    <span class = "fw-bolder product-price">$ 45.50</span>
+                </div>
+            </div>
+    
+            </div>
+    </div>
+
+    <div class="tab-pane" id="accessories" role="tabpanel" aria-labelledby="accessories-tab">
+        <div class = "collection-list mt-4 row gx-0 gy-3">
+
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 all">
+                <div class = "collection-img position-relative">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="productdetails">
+                    <img src ="img/cart-plant-1.png" class = "w-100">
+                    <img src ="img/featured-plant-1.png" class = "secondary-img w-100">
+                    </button>
+                </div>
+                <div class ="text-center">
+                    <p class ="fw-bold product-name">product name</p>
+                    <span class = "fw-bolder product-price">$ 45.50</span>
+                </div>
+            </div>
+    
+            </div>
+    </div>
+
   </div>
 
         </div>
     </div>
 </section>
+
 
          
     <!-- end of collection -->
